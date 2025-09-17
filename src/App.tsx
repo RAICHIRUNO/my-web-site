@@ -2,16 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import 'bootstrap/scss/bootstrap.scss';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>元高専生モリツグのWebSite</h1>
+      <div className="top_wrap">
+        <div className="top_bg bg-secondary">
+          <div className="top_inner text-white">
+            <h1>元高専生モリツグのWebSite</h1>
+          </div>
+        </div>
+      </div>
+      <div className="d-flex flex-row-reverse"><i className="bi bi-justify"></i></div>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className="btn btn-primary" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
